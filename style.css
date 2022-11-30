@@ -10,3 +10,94 @@ body {
 }
 
 /* Add styles here! */
+:root {
+  --sm: 8px;
+  --md: 16px;
+  --lg: 24px;
+  --xl: 32px;
+  --2xl: 48px;
+  --3xl: 64px;
+  --4xl: 96px;
+  --5xl: 128px;
+
+  --fs-md: 1rem;
+  --fs-lg: 1.25rem;
+  --fs-xl: 1.5rem;
+  --fs-2xl: 2rem;
+  --fs-3xl: 3rem;
+}
+
+/*
+Color palette
+Primary (green):
+
+hsl(160deg, 100%, 30%)
+Secondary (gold):
+
+hsl(45deg, 100%, 50%) (lighter)
+hsl(45deg, 100%, 40%) (darker)
+Grays:
+
+hsl(0deg, 0%, 0%) (black)
+hsl(0deg, 0%, 10%) (very dark)
+hsl(0deg, 0%, 30%) (dark)
+hsl(0deg, 0%, 40%) (medium)
+hsl(0deg, 0%, 60%) (light)
+hsl(0deg, 0%, 100%) (white)
+*/
+
+/* Custom CSS */
+.max-width-wrapper {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.intro-chunk {
+  padding-inline: var(--lg);
+  margin-top: var(--4xl);
+  margin-bottom: var(--3xl);
+  max-width: 415px;
+}
+
+.title {
+  font-size: var(--fs-2xl);
+  margin-bottom: var(--2xl);
+}
+
+p {
+  font-size: var(--fs-lg);
+  margin: 0;
+}
+
+p strong {
+  color: hsl(160deg, 100%, 30%);
+}
+
+header p:not(:last-child), section p:not(:last-child)  {
+  margin-bottom: var(--fs-md);
+}
+
+.indented-heading {
+  font-size: var(--fs-xl);
+  background-color: hsl(45deg, 100%, 50%);
+  max-width: fit-content;
+  padding-block: var(--fs-md);
+  padding-inline: var(--xl);
+  border-bottom: var(--sm) solid hsl(45deg, 100%, 40%);
+  margin-top: 0;
+  margin-bottom: var(--fs-md);
+  margin-left: calc(var(--xl) * -1);
+}
+
+main {
+  width: 100%;
+  padding-block: var(--3xl);
+  background-color: hsl(0, 0%, 40%);
+  border-top: var(--sm) solid hsl(0, 0%, 60%);
+}
+
+.card {
+  background-color: hsl(0, 0%, 100%);
+  padding: var(--sm) var(--lg) var(--lg);
+  border-bottom: var(--sm) solid hsl(0, 0%, 60%);
+}
